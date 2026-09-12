@@ -1,0 +1,40 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/auth_nav_graph"
+        app:startDestination="@id/onboardingFragment">
+
+    <fragment
+            android:id="@+id/onboardingFragment"
+            android:name="com.aistudyos.app.presentation.onboarding.OnboardingFragment"
+            android:label="Onboarding">
+
+        <!-- ✅ CHANGED: simple navigation (no popUpTo needed here) -->
+        <action
+                android:id="@+id/action_onboarding_to_login"
+                app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.aistudyos.app.presentation.auth.login.LoginFragment"
+            android:label="Login">
+
+        <action
+                android:id="@+id/action_login_to_register"
+                app:destination="@id/registerFragment"/>
+
+        <action
+                android:id="@+id/action_login_to_forgot"
+                app:destination="@id/forgotPasswordFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.aistudyos.app.presentation.auth.register.RegisterFragment"
+            android:label="Register"/>
+
+    <fragment
+            android:id="@+id/forgotPasswordFragment"
+            android:name="com.aistudyos.app.presentation.auth.forgotpassword.ForgotPasswordFragment"
+            android:label="Forgot Password"/>
+</navigation>
