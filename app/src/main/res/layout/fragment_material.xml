@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_main">
+
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialList_name"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_card"
+            app:title="Material List"
+            app:titleCentered="true"
+            app:titleTextColor="@android:color/black"
+            app:navigationIcon="@drawable/back"
+            app:navigationIconTint="@android:color/black"
+            app:titleTextAppearance="@style/ToolbarTitleBold"/>
+
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp">
+
+        <Button android:id="@+id/materialList_chat"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Chat"
+                android:backgroundTint="@color/brand_primary"
+                app:cornerRadius="12dp"/>
+
+        <Button android:id="@+id/materialList_quiz"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="AI Quiz"
+                android:backgroundTint="@color/brand_secondary"
+                app:cornerRadius="12dp"/>
+
+    </LinearLayout>
+
+    <!-- ✅ MATERIAL LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/materialList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="20dp"
+            android:layout_weight="1"/>
+
+</LinearLayout>
