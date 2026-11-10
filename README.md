@@ -1,5 +1,5 @@
 # AI Study OS – Android App 
-
+ 
 A production-grade Android application for smart studying powered by AI.
 
 ## Tech Stack
