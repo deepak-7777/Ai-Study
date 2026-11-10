@@ -1,0 +1,216 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main">
+
+    <!-- Loading Layout -->
+    <LinearLayout
+            android:id="@+id/loadingProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/profileColor" />
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/ProfileToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/bg_card"
+                    app:title="Profile"
+                    app:titleCentered="true"
+                    app:titleTextColor="@android:color/black"
+                    app:navigationIcon="@drawable/back"
+                    app:navigationIconTint="@android:color/black"
+                    app:titleTextAppearance="@style/ToolbarTitleBold"/>
+
+            <!-- Profile Image (ICON / PHOTO) -->
+
+            <FrameLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circle_border"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+                <ProgressBar
+                        android:id="@+id/imageLoader"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                <ImageView
+                        android:id="@+id/ivEditImage"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="bottom|end"
+                        android:background="@drawable/circle_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_pencil" />
+            </FrameLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="12dp">
+
+                <!-- Name -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                    <TextView
+                            android:id="@+id/tvFirstNameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Name"
+                            android:textColor="@color/TextColor"
+                            android:textSize="17sp" />
+
+                    <EditText
+                            android:id="@+id/tv_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Type your name"
+                            android:padding="12dp"
+                            android:textColor="@color/profileColor"
+                            android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Email -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                    <TextView
+                            android:id="@+id/tvEmailLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Email"
+                            android:textColor="@color/TextColor"
+                            android:textSize="17sp" />
+
+                    <EditText
+                            android:id="@+id/tv_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Type your email"
+                            android:padding="12dp"
+                            android:textColor="@color/profileColor"
+                            android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Phone -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                    <TextView
+                            android:id="@+id/tvPhoneLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Phone Number"
+                            android:textColor="@color/TextColor"
+                            android:textSize="17sp" />
+
+                    <EditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="Type your number"
+                            android:inputType="phone"
+                            android:padding="12dp"
+                            android:textColor="@color/profileColor"
+                            android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- About -->
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                    <TextView
+                            android:id="@+id/tvAboutLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="About"
+                            android:textColor="@color/TextColor"
+                            android:textSize="17sp" />
+
+                    <EditText
+                            android:id="@+id/etAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_edittext"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:hint="About yourself"
+                            android:padding="12dp"
+                            android:textColor="@color/profileColor"
+                            android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
+
+
+
+
+
