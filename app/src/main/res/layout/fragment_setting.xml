@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/cToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_card"
+            app:title="Settings"
+            app:titleTextColor="@color/black"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/ToolbarTitleBold" />
+
+    <!-- Content -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <!-- PROFILE SECTION -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="16dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/settingImage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/CircleImageView"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+
+                    <TextView
+                            android:id="@+id/settingName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/TextColor"
+                            android:text="Name"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    <TextView
+                            android:id="@+id/settingAbout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="about"
+                            android:textColor="@color/text_secondary"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- DIVIDER -->
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"/>
+
+            <!-- SETTINGS ITEMS (FIXED HEIGHT) -->
+
+            <!-- About -->
+            <LinearLayout
+                    android:id="@+id/aboutApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_info"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="About App"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/TextColor"
+                        android:paddingStart="16dp"/>
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+            <!-- Privacy -->
+            <LinearLayout
+                    android:id="@+id/privacyApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_privacy"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Privacy"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/TextColor"
+                        android:paddingStart="16dp"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+            <!-- Share -->
+            <LinearLayout
+                    android:id="@+id/shareApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_share"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Share"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/TextColor"
+                        android:paddingStart="16dp"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+            <!-- Feedback -->
+            <LinearLayout
+                    android:id="@+id/feedbackApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_feedback"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Feedback"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/TextColor"
+                        android:paddingStart="16dp"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+            <!-- Rate -->
+            <LinearLayout
+                    android:id="@+id/rateApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_star"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Rate App"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/TextColor"
+                        android:paddingStart="16dp"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+            <!-- Logout -->
+            <LinearLayout
+                    android:id="@+id/logoutApp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="14dp"
+                    android:orientation="horizontal">
+
+                <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_logout"/>
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="Logout"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/TextColor"
+                        android:paddingStart="16dp"
+                        android:layout_height="wrap_content"/>
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
