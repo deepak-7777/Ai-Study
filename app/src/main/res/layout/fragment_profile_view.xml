@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_main">
+
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/ProfileViewToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bg_card"
+            app:title="Profile Image"
+            app:titleCentered="true"
+            app:titleTextColor="@android:color/black"
+            app:navigationIcon="@drawable/back"
+            app:navigationIconTint="@android:color/black"
+            app:titleTextAppearance="@style/ToolbarTitleBold"/>
+
+    <FrameLayout
+            android:layout_width="340dp"
+            android:layout_height="340dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="85dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_border"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+    </FrameLayout>
+
+</LinearLayout>
